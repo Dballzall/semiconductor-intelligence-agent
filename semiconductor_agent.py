@@ -55,7 +55,7 @@ def search_news(query, max_results=5):
         return articles
         
     except Exception as e:
-        print(f"  ✗ Error searching {category}: {str(e)}")
+        print(f"  ✗ Error: {str(e)}")
         return []
 
 def analyze_with_claude(news_data):
