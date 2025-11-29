@@ -51,7 +51,7 @@ def search_news(query, max_results=5):
                 'source': article.get('source', {}).get('name', '')
             })
         
-        print(f"  ✓ Found {len(articles)} articles for {category}")
+        print(f"  ✓ Found {len(articles)} articles")
         return articles
         
     except Exception as e:
