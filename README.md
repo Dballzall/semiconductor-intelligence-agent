@@ -21,6 +21,7 @@ This AI agent:
 - **Supply Chain**: Chip shortages, manufacturing, capacity
 
 ---
+<img width="868" height="545" alt="Screenshot 2025-11-29 at 9 32 28 PM" src="https://github.com/user-attachments/assets/f5c99eec-76c2-43e1-9886-a15fdd8fde53" />
 
 ## Sample Briefing
 
