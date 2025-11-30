@@ -55,25 +55,7 @@ COMMUNICATIONS IMPLICATIONS
    - Requires 2-factor authentication enabled
    - Name it "semiconductor-agent"
 
-### Option 1: Run It Now (Manual Test)
-
-**Use Google Colab** (runs in your browser, no installation):
-
-1. Go to [Google Colab](https://colab.research.google.com)
-2. Create new notebook
-3. Copy the code from `semiconductor_agent.py` 
-4. Add these input prompts at the top:
-```python
-ANTHROPIC_API_KEY = input("Anthropic API Key: ")
-NEWS_API_KEY = input("NewsAPI Key: ")
-SENDER_EMAIL = input("Your Gmail: ")
-SENDER_PASSWORD = input("Gmail App Password: ")
-RECIPIENT_EMAIL = SENDER_EMAIL
-```
-5. Run it and enter your keys
-6. Check your email!
-
-### Option 2: Automated Daily Execution (The Real Power)
+### Automated Daily Execution
 
 **Fork this repository and set it up to run automatically:**
 
