@@ -1,6 +1,6 @@
 # Semiconductor Intelligence Agent
 
-**An AI-powered agent that monitors the semiconductor industry and delivers automated daily briefings to your inbox.**
+**What Is It: An AI-powered agent that monitors the semiconductor industry and delivers automated daily briefings to your inbox.**
 
 Built for corporate communications professionals who need to stay informed without drowning in news feeds.
 
