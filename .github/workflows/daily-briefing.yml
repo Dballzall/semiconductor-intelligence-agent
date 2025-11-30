@@ -2,8 +2,8 @@ name: Daily Semiconductor Briefing
 
 on:
   schedule:
-    # Runs every day at 8:00 AM EST (13:00 UTC)
-    - cron: '0 13 * * *'
+    # Runs every day at 7:48 AM EST (12:48 UTC) to beat the 8AM rush
+    - cron: '48 12 * * *'
   workflow_dispatch:  # Allows manual triggering for testing
 
 jobs:
