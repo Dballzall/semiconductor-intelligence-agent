@@ -2,7 +2,7 @@
 
 An AI-powered briefing agent that monitors the semiconductor industry and delivers a daily executive summary straight to your inbox.
 
-Built for corporate communications professionals who need to stay current without spending hours scanning news feeds.
+Built for communications professionals who need to answer 'What's the latest on [Topic]?' before their boss asks. Automates the 2 hours of morning reading required to stay smart on the semiconductor industry.
 
 **No coding required. Setup takes about 5 minutes.**
 
@@ -47,14 +47,14 @@ You don't need technical experience. If you can copy and paste, you can set this
 1. **Anthropic API Key** — https://console.anthropic.com
 2. **NewsAPI Key** — https://newsapi.org/register
 3. **Gmail App Password** — https://myaccount.google.com/apppasswords
-   - Requires 2FA
+   - Requires 2FA. Important: You must have 2-Step Verification enabled on your Google account for the "App Passwords" option to appear. It will not work with your regular email password.
    - Name it "semiconductor-agent"
 
 ### Set Up the Daily Email Agent
 
 #### Step 1: Fork This Repository
 
-Click the **Fork** button at the top of the page
+Click the **Fork** button (this just means 'Make a Copy' into your own account).
 
 This creates your own copy where your daily agent will run
 
@@ -97,7 +97,10 @@ These options are here if you want them. You can skip this section if you only n
 
 ### Change the Topics
 
-Edit `semiconductor_agent.py`:
+1. Click on the file named semiconductor_agent.py in the file list above.
+2. Click the Pencil Icon (Edit) in the top right corner of the file view.
+3. Change the words inside the quotes in the SEARCH_QUERIES section.
+4. Click Commit changes (green button) to save.
 ```python
 SEARCH_QUERIES = {
     'companies': 'TSMC NVIDIA Intel Samsung AMD ASML semiconductor',
@@ -110,14 +113,20 @@ SEARCH_QUERIES = {
 
 ### Change the Send Time
 
-Edit `.github/workflows/daily-briefing.yml`:
+1. Edit the file .github/workflows/daily-briefing.yml (click the Pencil icon).
+2. Look for the line cron: '0 13 * * *'
 ```yaml
 on:
   schedule:
     - cron: '0 13 * * *'  # 8 AM Eastern (13:00 UTC)
 ```
 
+Need a different time? Use crontab.guru to generate the specific code for your timezone.
+
 ### Add CC or Additional Recipients
+
+In semiconductor_agent.py:
+
 ```python
 CC_EMAILS = "colleague1@company.com,colleague2@company.com"
 ```
@@ -206,7 +215,7 @@ After it's running:
 - [Anthropic Documentation](https://docs.anthropic.com)
 - [NewsAPI Documentation](https://newsapi.org/docs)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [My LinkedIn](#)
+- [My LinkedIn](https://www.linkedin.com/in/ball-daniel/)
 
 ## License
 
@@ -225,4 +234,4 @@ Built with:
 
 Give the repo a ⭐ and share it with other communications professionals.
 
-Questions? Open an issue or reach out on [LinkedIn](#).
+Questions? Open an issue or reach out on [LinkedIn](https://www.linkedin.com/in/ball-daniel/)
