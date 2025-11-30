@@ -1,8 +1,8 @@
 # Semiconductor Intelligence Agent
 
-An AI-powered briefing agent that monitors the semiconductor (or whatever industry you pick) industry and delivers a daily executive summary straight to your inbox.
+An AI-powered briefing agent that monitors the semiconductor industry (or whatever industry you pick) and delivers a daily executive summary straight to your inbox.
 
-Built for communications professionals who need to answer 'What's the latest on [Topic]?' before their boss asks. Automates the 2 hours of morning reading required to stay smart on the semiconductor industry.
+Built for communications professionals who need to answer 'What's the latest on [Topic]?' before their boss asks. Automates the 2 hours of morning reading required to stay smart on your given industry.
 
 **No coding required. Setup takes about 5 minutes.**
 
