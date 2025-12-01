@@ -19,9 +19,9 @@ RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL')
 
 # Search queries
 SEARCH_QUERIES = {
-    'companies': 'TSMC NVIDIA Intel Samsung AMD ASML semiconductor',
-    'policy': 'semiconductor CHIPS Act export controls trade',
-    'supply_chain': 'chip shortage semiconductor supply chain manufacturing'
+    'companies': 'TSMC OR NVIDIA OR Intel OR Samsung OR AMD OR ASML',
+    'policy': 'semiconductor AND ("CHIPS Act" OR "export controls" OR trade OR tariff)',
+    'supply_chain': '"chip shortage" OR "supply chain" OR manufacturing OR foundry'
 }
 
 def search_news(query, max_results=5):
