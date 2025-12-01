@@ -135,14 +135,6 @@ on:
 
 Need a different time? Use crontab.guru to generate the specific code for your timezone.
 
-### Add CC or Additional Recipients
-
-In semiconductor_agent.py:
-
-```python
-CC_EMAILS = "colleague1@company.com,colleague2@company.com"
-```
-
 ## Cost
 
 Essentially free:
