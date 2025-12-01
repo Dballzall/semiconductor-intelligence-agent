@@ -12,7 +12,7 @@ This AI agent:
 - Searches major publications for semiconductor industry news
 - Analyzes developments using Claude AI
 - Delivers a polished daily briefing to your email
-- Runs automatically every morning at 8 AM Eastern
+- Runs automatically every morning at 8 AM Eastern (**Note on Timing:** GitHub Actions is a shared service, so exact timing varies.Your email will typically arrive between 7:50 AM and 8:30 AM depending on server load.)
 
 ## What It Monitors
 
@@ -96,18 +96,26 @@ GitHub Actions is simply a free scheduler that runs the agent for you each morni
 These options are here if you want them. You can skip this section if you only need the default setup.
 
 ### Change the Topics
+### Option A: Use AI to Rewrite It for Your Industry (Easiest)
+   1. Open semiconductor_agent.py and copy the entire code.
+   2. Paste it into ChatGPT, Claude, or Gemini with this prompt:
+      "I have this Python script that tracks semiconductor news. I want to modify it to track the [INSERT INDUSTRY] industry instead. Please
+      give me the updated 'SEARCH_QUERIES' dictionary with the best keywords for my industry."
+   3. Copy the new code back into your file.
 
+### Option B: Manually Change the Topics
 1. Click on the file named semiconductor_agent.py in the file list above.
 2. Click the Pencil Icon (Edit) in the top right corner of the file view.
 3. Change the words inside the quotes in the SEARCH_QUERIES section.
 4. Click Commit changes (green button) to save.
+   
 ```python
 SEARCH_QUERIES = {
-    'companies': 'TSMC NVIDIA Intel Samsung AMD ASML semiconductor',
-    'policy': 'semiconductor CHIPS Act export controls trade',
-    'supply_chain': 'chip shortage semiconductor supply chain',
-    'ai_chips': 'AI accelerator GPU tensor processing',
-    'manufacturing': 'fab construction ASML lithography'
+    'companies': 'TSMC OR NVIDIA OR Intel OR Samsung OR AMD OR ASML',
+    'policy': 'semiconductor AND ("CHIPS Act" OR "export controls" OR trade OR tariff)',
+    'supply_chain': '"chip shortage" OR "supply chain" OR manufacturing',
+    'ai_chips': '"AI accelerator" OR GPU OR "tensor processing"',
+    'manufacturing': '"fab construction" OR ASML OR lithography'
 }
 ```
 
