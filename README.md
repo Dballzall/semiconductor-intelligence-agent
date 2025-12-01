@@ -13,7 +13,8 @@ This AI agent:
 - Analyzes developments using Claude AI
 - Delivers a polished daily briefing to your email
 - Runs automatically every morning at 8 AM Eastern
-   (**Note on Timing:** GitHub Actions is a shared service, so exact timing varies.Your email will typically arrive between 7:50 AM and 8:30     AM depending on server load.)
+
+  (**Note on Timing:** GitHub Actions is a shared service, so exact timing varies.Your email will typically arrive between 7:50 AM and 8:30     AM depending on server load.)
 
 ## What It Monitors
 
@@ -100,9 +101,11 @@ These options are here if you want them. You can skip this section if you only n
 ### Option A: Use AI to Rewrite It for Your Industry (Easiest)
    1. Open semiconductor_agent.py and copy the entire code.
    2. Paste it into ChatGPT, Claude, or Gemini with this prompt:
+      ```python
       "I have this Python script that tracks semiconductor news. I want to modify it to track the [INSERT INDUSTRY] industry instead. Please
       give me the updated 'SEARCH_QUERIES' dictionary with the best keywords for my industry."
-   3. Copy the new code back into your file.
+      ```
+   4. Copy the new code back into your file.
 
 ### Option B: Manually Change the Topics
 1. Click on the file named semiconductor_agent.py in the file list above.
