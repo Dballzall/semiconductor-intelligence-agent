@@ -12,7 +12,8 @@ This AI agent:
 - Searches major publications for semiconductor industry news
 - Analyzes developments using Claude AI
 - Delivers a polished daily briefing to your email
-- Runs automatically every morning at 8 AM Eastern (**Note on Timing:** GitHub Actions is a shared service, so exact timing varies.Your email will typically arrive between 7:50 AM and 8:30 AM depending on server load.)
+- Runs automatically every morning at 8 AM Eastern
+   (**Note on Timing:** GitHub Actions is a shared service, so exact timing varies.Your email will typically arrive between 7:50 AM and 8:30     AM depending on server load.)
 
 ## What It Monitors
 
