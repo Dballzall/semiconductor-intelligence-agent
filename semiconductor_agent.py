@@ -28,13 +28,18 @@ def search_news(query, max_results=5):
     """Search for recent news"""
     url = "https://newsapi.org/v2/everything"
     
+    # Calculate strictly the last 24 hours
+    today = datetime.now()
+    yesterday = today - timedelta(days=1)
+    
     params = {
         'q': query,
         'apiKey': NEWS_API_KEY,
         'language': 'en',
-        'sortBy': 'publishedAt',
+        'sortBy': 'publishedAt', # This ensures you get NEWEST, not "most popular"
         'pageSize': max_results,
-        'from': (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+        'from': yesterday.strftime('%Y-%m-%d'),
+        'to': today.strftime('%Y-%m-%d')
     }
     
     try:
@@ -58,9 +63,10 @@ def search_news(query, max_results=5):
         print(f"  ✗ Error: {str(e)}")
         return []
 
+
 def analyze_with_claude(news_data):
     """Use Claude to analyze news"""
-    news_text = "# Semiconductor Industry News - Past 7 Days\n\n"
+    news_text = "# Semiconductor Industry News - Past 24 Hours\n\n"
     
     for category, articles in news_data.items():
         if articles:
